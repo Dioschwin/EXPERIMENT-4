@@ -1,0 +1,76 @@
+// Dioschwin N. Sumo
+// 1-12
+
+#include <iostream>
+
+using namespace std;
+
+	void formula()
+	{
+	
+	char choice;
+	do
+	{
+		
+	
+	int op;
+	int i;
+	int j;
+	int k;
+	
+	
+	cout << "MENU:" << "\n";
+	cout << "\t1. Add" << "\n";
+	cout << "\t2. Subtract" << "\n";
+	cout << "\t3. Multiply" << "\n";
+	cout << "\t4. Divide" << "\n";
+	cout << "\t5. Modulus" << "\n";
+	cout << "\n";
+	
+	cout << "Enter your choice: "; 
+	cin >> op;
+	cout << "Enter your two numbers: "; 
+	cin >> i; cin >> k;
+	
+	switch (op)
+	{
+	case 1:
+		j = i + k;
+		cout << "Result: " << j;
+		break;
+		
+	case 2: 
+		j = i - k;
+		cout << "Result: " << j;
+		break;
+		
+	case 3:
+		j = i * k;
+		cout << "Result: " << j;
+		break;
+		
+	case 4:
+		j = i / k;
+		cout << "Result: " << j;
+		break;
+	case 5:
+		j = i % k;
+		cout << "Result: " << j;
+		break;
+	}
+	
+	cout << "\n \n";
+	cout << "Continue? (y): ";
+	cin >> choice;
+	cout << "\n";
+	
+	} while (choice == 'y' || choice == 'Y');
+	}
+
+int main()
+
+{
+	formula();
+	
+	return 0;
+}
