@@ -1,0 +1,62 @@
+#include <iostream>
+
+using namespace std;
+
+void bubblesort()
+
+{
+	int size;
+	int a;
+	int b;
+	int c;
+	int arr[100];
+	
+	cout << "\t---------------Bubble Sorting---------------" << "\n";
+	cout << "\nEnter the array size : " << flush; 
+	cin >> size;
+	cout << "Enter the " << size << " elements : ";
+	
+	for (c = 0; c < size; c++)
+	{
+		cin >> arr[c];
+	}
+	
+	cout << "\n";
+	
+	cout << "Your data : ";
+	for (c = 0; c < size; c++)
+	{
+		cout << arr[c] << " ";
+	}
+	
+	
+	for (c = 0; c < size; c++)
+	{
+		for(a = 0; a < size - c - 1; a++)
+		{
+			if (arr[a] > arr[a+1])
+			{
+				b = arr[a];
+				arr[a] = arr[a+1];
+				arr[a+1] = b;
+			}
+		}
+	}
+	
+	cout << "\n\n";
+	cout << "After using bubble sort... \n \n";
+	cout << "Sorted data : ";
+	for (c = 0; c < size; c++)
+	{
+		cout << arr[c] << " ";
+		
+	}
+}
+int main()
+
+{
+	bubblesort();	
+	
+	return 0;
+	
+}
